@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Юлия](https://up.htmlacademy.ru/adaptive/24/user/1067377).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Бервяченок](https://htmlacademy.ru/profile/jackson).
 
 ---
 
