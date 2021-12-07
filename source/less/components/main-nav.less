@@ -1,0 +1,38 @@
+.main-nav {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.main-nav__list {
+  .list-item-style();
+}
+
+.main-nav__item {
+  padding: 15px 0;
+  border-top: 1px solid @black;
+  box-shadow: 0 1px 0 0 @black, inset 0 1px 0 0 rgba(@white, 0.15);
+
+  a {
+    .link-style();
+    color: @white;
+
+    &:hover,
+    &:focus {
+      color: @pink;
+    }
+
+    &:active {
+      color: rgba(@pink, 0.3);
+    }
+
+    /*   НЕ ЗАБЫТЬ!
+    @media (min-width: @desktop-width) {
+      &:active {
+        color: rgba(@white, 0.3);
+      }
+    }
+    */
+  }
+}

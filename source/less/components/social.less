@@ -1,0 +1,28 @@
+.social {
+  padding: 10px 0;
+}
+
+.social__list {
+  .list-item-style();
+}
+
+.social__link {
+  border: 3px solid rgba(@blue, 0.1);
+  border-radius: 50%;
+  color: @pink;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    border-color: @blue;
+  }
+
+  &:active {
+    border: 3px solid rgba(@blue, 0.1);
+    color: rgba(@pink, 0.3);
+  }
+}

@@ -1,0 +1,43 @@
+.page-header {
+  background-color: @blue;
+}
+
+.page-header__logo {
+  text-align: left;
+  padding: 22px 20px;
+
+  img {
+    width: 74px;
+    height: 23px;
+  }
+}
+
+.page-header__toggle {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.page-header__button {
+  color: @white;
+
+  &:hover,
+  &:focus {
+    color: @pink;
+  }
+
+  &:active {
+    color: rgba(@pink, 0.3);
+  }
+}
+
+.page-header__button--closed {
+  width: 50px;
+  height: 24px;
+}
+
+.page-header__button--opened {
+  width: 23px;
+  height: 23px;
+}
