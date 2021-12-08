@@ -1,0 +1,199 @@
+.form__user-name,
+.form__user-achievements,
+.form__user-contacts,
+.form__user-app,
+.form__user-emotions {
+  border: none;
+  margin: 0;
+}
+
+.form__user-name-list,
+.form__user-achievements-list,
+.form__user-contacts-list,
+.form__user-app-list {
+  .list-item-style();
+}
+
+.form__user-name {
+  padding-top: 25px;
+  padding-bottom: 45px;
+}
+
+.form__user-name-item {
+  text-align: left;
+  line-height: 30px;
+  margin: 0 0 20px;
+}
+
+.form__user-name-label {
+  color: @pink;
+  text-transform: uppercase;
+}
+
+.form__user-name-input {
+  font-size: 18px;
+  line-height: 30px;
+  color: @blue;
+  height: 59px;
+  border: 2px solid @grey;
+  border-radius: 1px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  display: block;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    border-color: @blue;
+  }
+
+  &:active {
+    border-color: @pink;
+  }
+
+  &::placeholder {
+    color: @blue;
+  }
+}
+
+.form__user-achievements {
+  background-color: @light_grey;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.form__user-achievements-legend {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @pink;
+  text-transform: uppercase;
+}
+
+.form__user-achievements-label {
+  font-size: 18px;
+  line-height: 30px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 39px;
+    height: 39px;
+    background-image: url("../../img/icons/icon_checkbox.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-image: url("../../img/icons/icon_checkbox--hover.svg");
+  }
+
+  &:active::before {
+    background-image: url("../../img/icons/icon_checkbox--active.svg");
+  }
+}
+
+.form__user-contacts-legend {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @pink;
+  text-transform: uppercase;
+  //display: none;
+}
+
+.form__user-contacts-item {
+  text-align: left;
+  margin: 0 0 20px;
+  line-height: 30px;
+}
+
+.form__user-contacts-label {
+  color: @pink;
+  text-transform: uppercase;
+}
+
+.form__user-contacts-input {
+  font-size: 18px;
+  line-height: 30px;
+  color: @blue;
+  height: 59px;
+  border: 2px solid @grey;
+  padding-left: 20px;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+
+  &:hover,
+  &:focus {
+    border-color: @blue;
+  }
+
+  &:active {
+    border-color: @pink;
+  }
+
+  &::placeholder {
+    color: @blue;
+  }
+}
+
+.form__user-app {
+  background-color: @light_grey;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.form__user-app-legend {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @pink;
+  text-transform: uppercase;
+}
+
+.form__user-app-label {
+  font-size: 18px;
+  line-height: 30px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 41px;
+    height: 41px;
+    background-image: url("../../img/icons/icon_radio_btn.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    background-image: url("../../img/icons/icon_radio_btn--hover.svg");
+  }
+
+  &:active::before {
+    background-image: url("../../img/icons/icon_radio_btn--active.svg");
+  }
+}
+
+.form__user-emotions {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+.form__user-emotions-label {
+  line-height: 18px;
+  color: @pink;
+  text-transform: uppercase;
+}
+
+.form__user-emotions-textarea {
+  font-size: 18px;
+  line-height: 30px;
+  color: @blue;
+  padding: 10px;
+  border: 2px solid @grey;
+  margin-top: 14px;
+  box-sizing: border-box;
+}

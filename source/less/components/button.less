@@ -1,0 +1,22 @@
+.button {
+  font-size: 18px;
+  line-height: 30px;
+  color: @white;
+  text-transform: uppercase;
+  background-color: @green;
+  border: none;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus {
+    background-color: @special_green;
+  }
+
+  &:active {
+    color: rgba(@white, 0.3);
+  }
+
+  &:disabled {
+    background-color: @grey;
+  }
+}

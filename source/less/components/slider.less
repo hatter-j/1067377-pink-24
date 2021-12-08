@@ -1,0 +1,29 @@
+.slider__toggles {
+  margin: 0;
+}
+
+.slider__toggle {
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(@blue, 0.3);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(@blue, 0.6);
+  }
+
+  &:active {
+    background-color: rgba(@blue, 0.1);
+  }
+}
+
+.slider__toggle--current {
+  width: 11px;
+  height: 11px;
+  background-color: @white;
+  border: 3px solid @blue;
+}

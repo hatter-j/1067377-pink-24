@@ -1,0 +1,59 @@
+.download-app {
+  background-color: @dark_blue;
+}
+
+.download-app__background {
+  background-image: url("../../img/background_hand_phone.png"), url("../../img/background_city.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 320px, cover;
+  padding-top: 95px;
+  min-height: 462px;
+}
+
+.download-app__slogan {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 300;
+  color: @white;
+  margin: 0;
+}
+
+.download-app__wrapper {
+  padding-top: 28px;
+  padding-bottom: 38px;
+}
+
+.download-app__button {
+  .link-style();
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: @white;
+  padding: 15px 0;
+  border: 3px solid @white;
+  border-radius: 39px;
+  display: inline-block;
+  width: 274px;
+
+  &:hover,
+  &:focus {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &:active {
+    color: rgba(@pink, 0.3);
+  }
+}
+
+.download-app__list {
+  .list-item-style();
+}
+
+.download-app__description {
+  line-height: 24px;
+  font-weight: 300;
+  color: @white;
+  margin: 0;
+}
