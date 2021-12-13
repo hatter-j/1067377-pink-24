@@ -95,6 +95,12 @@
   }
 }
 
+.form__user-achievements-checkbox:checked {
+  & ~ .form__user-achievements-label::before {
+    background-image: url("../../img/icons/icon_tick_checkbox.svg");
+  }
+}
+
 .form__user-contacts-legend {
   font-size: 14px;
   line-height: 18px;
@@ -174,6 +180,12 @@
 
   &:active::before {
     background-image: url("../../img/icons/icon_radio_btn--active.svg");
+  }
+}
+
+.form__user-app-radio:checked {
+  & ~ .form__user-app-label::before {
+    background-image: url("../../img/icons/icon_radio-btn_checked.svg");
   }
 }
 

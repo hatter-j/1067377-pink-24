@@ -1,12 +1,50 @@
 .page-footer {
   padding: 42px 0 30px;
+
+  & .wrapper {
+    @media (min-width: @tablet-width) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
-/* ПОПРАВИТЬ */
-.page-footer__logo path {
-  &:hover,
-  &:focus {
+.page-footer__logo {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo:hover,
+.page-footer__logo:focus {
+  & path {
     fill: @pink;
   }
 }
-/*  &:active {}  */
+
+.page-footer__logo:active {
+  & path {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo:active path:not(.page-footer__logo-glasses) {
+  fill: @blue;
+}
+
+.page-footer__logo-desktop:hover,
+.page-footer__logo-desktop:focus {
+  & path {
+    fill: @pink;
+  }
+}
+
+.page-footer__logo-desktop:active {
+  & path {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-desktop:active path:not(.page-footer__logo-pink) {
+  fill: @blue;
+}
