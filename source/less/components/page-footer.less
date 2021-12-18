@@ -32,6 +32,14 @@
   fill: @blue;
 }
 
+.page-footer__logo-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
 .page-footer__logo-desktop:hover,
 .page-footer__logo-desktop:focus {
   & path {

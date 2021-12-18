@@ -1,17 +1,6 @@
 .features {
   background-color: @light_grey;
   position: relative;
-  //margin: 0 auto;
-}
-
-.features__gradient {
-  position: absolute;
-  left: 0;
-  top: -35px;
-  width: 100%;
-  height: 35px;
-  background-image: linear-gradient(to right bottom, transparent 50%, @special_green 50%);
-  /*   ---- ПОМЕНЯТЬ ЦВЕТ И ВЫСОТУ -----    */
 }
 
 .features__list {
@@ -30,9 +19,10 @@
   @media (min-width: @desktop-width) {
     margin-left: 0;
     text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
+    max-width: 940px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   br {
@@ -50,11 +40,12 @@
     height: 320px;
     background-image: url("../../img/phone_mobile.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom -43px;
     margin: 0 auto;
 
     @media (min-width: @tablet-width) {
       background-image: url("../../img/phone_tablet.png");
+      background-position: center bottom -65px;
       width: 268px;
       height: 547px;
       position: absolute;
@@ -82,7 +73,7 @@
       height: 382px;
       background-image: url("../../img/phone_desktop_black-white.png");
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center bottom -80px;
     }
 
     &:nth-child(2)::before {
@@ -92,7 +83,7 @@
       height: 382px;
       background-image: url("../../img/phone_desktop_pink.png");
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center bottom -80px;
     }
 
     &:nth-child(3)::before {
@@ -102,7 +93,7 @@
       height: 382px;
       background-image: url("../../img/phone_desktop_pink-smile.png");
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center bottom -80px;
     }
   }
 }
