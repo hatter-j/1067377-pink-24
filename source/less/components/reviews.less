@@ -1,5 +1,10 @@
+.reviews {
+  background-color: @white;
+}
+
 .reviews__slider {
   padding: 50px 0 55px;
+  //position: relative;
 }
 
 .reviews__list {
@@ -8,10 +13,17 @@
 
 .reviews__blockquote {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+  }
 }
 
 .reviews__item {
   padding-bottom: 42px;
+  /*position: absolute;
+  top: -20px;
+  left: 0;*/
 }
 
 .reviews__user-name {
@@ -20,9 +32,41 @@
   font-weight: 700;
   color: @black;
   margin: 0 0 31px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin-top: 50px;
+
+    &::after {
+      content: "25 лет, водитель трамвая";
+      display: block;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: 400;
+
+      @media (min-width: @desktop-width) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
 }
 
 .reviews__text {
   line-height: 30px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    order: -1;
+  }
+}
+
+.reviews__toggles {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

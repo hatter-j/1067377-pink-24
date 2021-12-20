@@ -3,16 +3,33 @@
   line-height: 32px;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: none;
+    margin-left: 10px;
+  }
 }
 
 .main-nav__list {
   .list-item-style();
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .main-nav__item {
   padding: 15px 0;
   border-top: 1px solid @black;
   box-shadow: 0 1px 0 0 @black, inset 0 1px 0 0 rgba(@white, 0.15);
+
+  @media (min-width: @desktop-width) {
+    border-top: none;
+    box-shadow: none;
+    padding: 0;
+  }
 
   a {
     .link-style();
@@ -27,12 +44,17 @@
       color: rgba(@pink, 0.3);
     }
 
-    /*   НЕ ЗАБЫТЬ!
     @media (min-width: @desktop-width) {
       &:active {
         color: rgba(@white, 0.3);
       }
     }
-    */
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__item--current a:not([href]) {
+    padding-bottom: 10px;
+    border-bottom: 2px solid @white;
   }
 }

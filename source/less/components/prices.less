@@ -1,19 +1,29 @@
 .prices {
   background-color: @light_grey;
-  padding: 100px 0 45px;
+  padding: 50px 0 45px;
 }
 
 .prices__table {
   margin: 0 auto 43px;
   text-transform: uppercase;
+  line-height: 30px;
+  width: 100%;
+}
+
+.prices__heading {
+  background-color: @blue;
 }
 
 .prices__body {
   background-color: @white;
 }
 
-.prices__heading {
-  background-color: @blue;
+.prices__name-empty {
+  background-color: transparent;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
 
 .prices__name {
@@ -22,13 +32,55 @@
   color: @white;
   padding: 19px 5px 35px;
 
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
+
   span {
     font-size: 16px;
     font-weight: 700;
+
+    @media (min-width: @desktop-width) {
+      font-size: 18px;
+    }
   }
 }
 
 .prices__composition {
   text-align: left;
   padding: 25px 3px;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    text-transform: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.prices__hide-mobile {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.prices__set-mobile {
+  display: none;
+
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+}
+
+.prices__toggles {
+  display: none;
+
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
 }

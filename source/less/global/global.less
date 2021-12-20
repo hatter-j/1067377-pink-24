@@ -26,10 +26,23 @@ img {
   margin: 0;
 }
 
-.center {
-  margin: 0 auto;
-}
-
 .wrapper {
   padding: 0 20px;
+  margin: 0 auto;
+  width: 320px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 660px;
+    max-width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 980px;
+  }
+}
+
+.wrapper--no-padding {
+  margin-left: -20px;
+  margin-right: -20px;
 }

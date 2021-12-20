@@ -1,0 +1,92 @@
+.effect {
+  text-align: left;
+  background-color: @white;
+  margin-left: auto;
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @light_grey;
+    padding-top: 115px;
+    padding-bottom: 120px;
+  }
+}
+
+.effect__wrapper {
+  position: relative;
+  padding-left: 330px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../img/timer.svg");
+    background-repeat: no-repeat;
+    width: 238px;
+    height: 276px;
+
+    @media (min-width: @desktop-width) {
+      top: -80px;
+      background-image: url("../../img/timer_desktop.svg");
+      width: 298px;
+      height: 345px;
+    }
+  }
+}
+
+.effect__caption {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+
+  @media (min-width: @desktop-width) {
+    line-height: 30px;
+  }
+
+  br {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.effect__link {
+  color: @pink;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.effect__description {
+  max-width: 305px;
+  margin: 0 0 10px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 535px;
+    margin-bottom: 30px;
+  }
+
+  br:nth-child(1) {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  br:nth-child(2) {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+}
