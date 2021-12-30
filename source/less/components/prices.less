@@ -10,26 +10,27 @@
   width: 100%;
 }
 
-.prices__heading {
-  background-color: @blue;
+.prices__heading tr {
+  &::before {
+    content: "";
+    display: block;
+    padding: 19px 5px 35px;
+
+    @media (max-width: @mobile-width-only) {
+      display: none;
+    }
+  }
 }
 
 .prices__body {
   background-color: @white;
 }
 
-.prices__name-empty {
-  background-color: transparent;
-
-  @media (max-width: @mobile-width-only) {
-    display: none;
-  }
-}
-
 .prices__name {
   font-size: 18px;
   font-weight: 300;
   color: @white;
+  background-color: @blue;
   padding: 19px 5px 35px;
 
   @media (min-width: @desktop-width) {

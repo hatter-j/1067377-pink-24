@@ -1,6 +1,7 @@
 .effect {
   text-align: left;
   background-color: @white;
+  padding-top: 30px;
   margin-left: auto;
   display: none;
 
@@ -16,21 +17,18 @@
 }
 
 .effect__wrapper {
-  position: relative;
-  padding-left: 330px;
+  display: flex;
+  justify-content: space-between;
 
   &::before {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: block;
     background-image: url("../../img/timer.svg");
     background-repeat: no-repeat;
     width: 238px;
     height: 276px;
 
     @media (min-width: @desktop-width) {
-      top: -80px;
       background-image: url("../../img/timer_desktop.svg");
       width: 298px;
       height: 345px;
