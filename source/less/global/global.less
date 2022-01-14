@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -26,11 +32,10 @@ img {
   margin: 0;
 }
 
-.wrapper {
+.container {
   padding: 0 20px;
   margin: 0 auto;
   width: 320px;
-  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     width: 660px;
@@ -42,7 +47,9 @@ img {
   }
 }
 
-.wrapper--no-padding {
-  margin-left: -20px;
-  margin-right: -20px;
+.container--full-width {
+  @media (max-width: @desktop-width) {
+    padding: 0;
+    width: 100%;
+  }
 }

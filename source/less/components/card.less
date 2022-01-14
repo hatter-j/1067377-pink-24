@@ -1,0 +1,102 @@
+.card {
+  text-align: left;
+
+  img {
+    width: 280px;
+    height: 180px;
+    display: flex;
+    background-color: @grey;
+    object-fit: contain;
+
+    @media (min-width: @tablet-width) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 300px;
+      height: 400px;
+    }
+  }
+}
+
+.card--photo-of-day {
+  margin-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "Панорама дня";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    .link-style();
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 700;
+    color: @white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 6px 5px;
+    background-color: @pink;
+  }
+
+  img {
+    width: 100%;
+    height: 137px;
+    object-fit: cover;
+
+    @media (min-width: @tablet-width) {
+      height: 509px;
+    }
+
+    @media (min-width: @desktop-width) {
+      height: 506px;
+    }
+  }
+}
+
+.card--photo-of-day .card__link {
+  width: 100%;
+  text-decoration: none;
+}
+
+.card__content {
+  background-color: @light_grey;
+  padding: 26px 10px 26px 17px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 200px;
+  }
+}
+
+.card__user-name {
+  font-weight: 700;
+}
+
+.card__user-post-time {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card__text {
+  margin: 0;
+  /*max-height: 34px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;*/
+}
+
+.card__likes-button {
+  border: none;
+}
+
+.card__likes-number {
+  font-size: 12px;
+  color: @pink;
+  text-transform: uppercase;
+  margin: 0;
+}

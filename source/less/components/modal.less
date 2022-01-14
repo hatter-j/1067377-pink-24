@@ -2,8 +2,19 @@
   font-size: 18px;
   font-weight: 700;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.modal__text {
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .modal__button {
-  padding: 23px 2px;
+  padding: 10px 2px;
 }

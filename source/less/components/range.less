@@ -1,5 +1,19 @@
 .range {
   padding: 10px;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.range--mobile {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .range__controls {
