@@ -5,26 +5,24 @@
   &::before {
     content: "";
     position: absolute;
-    top: -37px;
+    top: -36px;
     left: 0;
     width: 100%;
     height: 37px;
-    border-bottom: 37px solid @pink;
-    border-left: 320px solid transparent;
+    border-bottom: 37px solid @light_grey;
+    border-left: 100vw solid transparent;
     z-index: -1;
 
     @media (min-width: @tablet-width) {
-      top: -54px;
+      top: -53px;
       height: 54px;
-      border-bottom: 54px solid @pink;
-      border-left: 660px solid transparent;
+      border-bottom: 54px solid @light_grey;
     }
 
     @media (min-width: @desktop-width) {
-      top: -105px;
-      height: 105px;
-      border-bottom: 105px solid @pink;
-      border-left: 980px solid transparent;
+      top: -97px;
+      height: 98px;
+      border-bottom: 98px solid @light_grey;
     }
   }
 }

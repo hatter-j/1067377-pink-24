@@ -13,10 +13,12 @@
 .page-header__box {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  min-height: 66px;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    align-items: center;
+    min-height: 110px;
   }
 }
 
@@ -24,8 +26,6 @@
   @media (min-width: @desktop-width) {
     display: flex;
     align-items: center;
-    padding-top: 27px;
-    padding-bottom: 43px;
   }
 }
 
@@ -42,16 +42,7 @@
 }
 
 .page-header__logo {
-  text-align: left;
-  padding: 22px 0;
-
-  @media (min-width: @tablet-width) {
-    padding: 27px 0 43px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0;
-  }
+  display: flex;
 }
 
 .page-header__logo-mobile {
@@ -97,11 +88,6 @@
 }
 
 .page-header .page-header__toggle {
-  /*position: absolute;
-  top: 23px;
-  right: 20px;
-  z-index: 2;
-  display: block;*/
   width: 23px;
   height: 23px;
 
@@ -111,11 +97,6 @@
 }
 
 .page-header--closed .page-header__toggle {
-  /*position: absolute;
-  top: 21px;
-  right: 20px;
-  z-index: 2;
-  display: block;*/
   width: 50px;
   height: 24px;
 
