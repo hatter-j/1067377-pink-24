@@ -6,7 +6,7 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 212px;
+    padding-top: 184px;
     min-height: 729px;
   }
 
@@ -35,7 +35,7 @@
   @media (min-width: @desktop-width) {
     width: 980px;
     background-image: url("../../img/background_hand_phone_desktop.png");
-    background-position: center;
+    background-position: bottom right 21px;
     background-repeat: no-repeat;
     min-height: 645px;
   }
@@ -46,7 +46,7 @@
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 320px, cover;
-  padding-top: 95px;
+  padding-top: 87px;
   min-height: 462px;
 
   @media (min-width: @tablet-width) {
@@ -61,30 +61,41 @@
   line-height: 29px;
   font-weight: 300;
   color: @white;
-  margin: 0;
+  margin: 0 auto;
+  width: 250px;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
     line-height: 48px;
-    max-width: 200px;
-    margin-left: 30px;
+    width: 200px;
+    padding-top: 20px;
+    margin-left: 50px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 50px;
     line-height: 68px;
-    max-width: 300px;
+    width: 300px;
+    padding-top: 0;
     margin-left: 0;
   }
 }
 
 .download-app__footer {
   padding-top: 28px;
-  padding-bottom: 38px;
+  padding-bottom: 31px;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
+    padding-top: 30px;
     padding-bottom: 0;
-    max-width: 300px;
+    margin-left: 0;
+    width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 37px;
   }
 }
 
@@ -98,7 +109,11 @@
   border: 3px solid @white;
   border-radius: 39px;
   display: inline-block;
-  width: 274px;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 21px;
@@ -118,8 +133,17 @@
 .download-app__list {
   .list-item-style();
   display: flex;
-  justify-content: space-around;
-  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34px 38px 13px;
+
+  @media (min-width: @tablet-width) {
+    padding: 47px 50px 25px 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 71px 48px 43px 47px;
+  }
 }
 
 .download-app__description {

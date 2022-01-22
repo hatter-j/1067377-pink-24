@@ -1,14 +1,67 @@
 .reviews {
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 59px;
+  }
 }
 
 .reviews__slider {
-  padding: 50px 0 55px;
-  //position: relative;
+  padding: 41px 0 57px;
+
+  @media (min-width: @desktop-width) {
+    padding-top: 11px;
+    padding-bottom: 89px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 79px;
+      height: 63px;
+      background-image: url("../../img/icons/icon_quotes.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      order: -1;
+      margin: 0 auto;
+    }
+  }
 }
 
 .reviews__list {
   .list-item-style();
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 22px;
+      height: 41px;
+      background-image: url("../../img/icons/icon_slider_arrow.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      transform: rotate(180deg);
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+      background-image: url("../../img/icons/icon_slider_arrow--hover.svg");
+    }
+
+    &:active::before,
+    &:active::after {
+      background-image: url("../../img/icons/icon_slider_arrow--active.svg");
+    }
+  }
 }
 
 .reviews__blockquote {
@@ -20,10 +73,16 @@
 }
 
 .reviews__item {
-  padding-bottom: 42px;
-  /*position: absolute;
-  top: -20px;
-  left: 0;*/
+  padding-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 51px;
+    width: 688px;
+  }
 }
 
 .reviews__user-name {
@@ -31,11 +90,11 @@
   line-height: 30px;
   font-weight: 700;
   color: @black;
-  margin: 0 0 31px 0;
+  margin: 0 0 13px 0;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 36px;
 
     &::after {
       content: "25 лет, водитель трамвая";

@@ -1,7 +1,7 @@
 .effect {
   text-align: left;
   background-color: @white;
-  padding-top: 30px;
+  padding-top: 54px;
   margin-left: auto;
   display: none;
 
@@ -11,14 +11,23 @@
 
   @media (min-width: @desktop-width) {
     background-color: @light_grey;
-    padding-top: 115px;
-    padding-bottom: 120px;
+    padding-top: 25px;
+    padding-bottom: 67px;
+  }
+}
+
+.effect__box {
+  padding-right: 5px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 35px;
   }
 }
 
 .effect__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   &::before {
     content: "";
@@ -40,9 +49,11 @@
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
+  margin: 20px 0 10px;
 
   @media (min-width: @desktop-width) {
     line-height: 30px;
+    margin: 48px 0 24px;
   }
 
   br {

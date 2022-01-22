@@ -1,6 +1,16 @@
 .slogan {
-  padding-top: 46px;
-  padding-bottom: 41px;
+  padding-top: 40px;
+  padding-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 62px;
+    padding-bottom: 150px;
+  }
 }
 
 .slogan__text {
@@ -13,7 +23,7 @@
   @media (min-width: @tablet-width) {
     font-size: 40px;
     line-height: 55px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {

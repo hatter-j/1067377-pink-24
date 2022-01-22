@@ -1,5 +1,13 @@
 .social {
-  padding: 10px 0;
+  padding: 32px 0 35px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 13px;
+  }
 }
 
 .social__list {
@@ -12,11 +20,12 @@
   border: 3px solid rgba(@blue, 0.1);
   border-radius: 50%;
   color: @pink;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 6px;
 
   &:hover,
   &:focus {
