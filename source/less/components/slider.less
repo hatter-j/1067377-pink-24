@@ -1,3 +1,7 @@
+.slider {
+  position: relative;
+}
+
 .slider__toggles {
   width: 58px;
   margin: 0 auto;
@@ -30,4 +34,43 @@
   height: 11px;
   background-color: @white;
   border: 3px solid @blue;
+}
+
+.slider__nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.slider__nav-btn {
+  position: absolute;
+  top: -70px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  color: fade(@blue, 30%);
+
+  &:hover,
+  &:focus {
+    color: fade(@blue, 60%);
+  }
+
+  &:active {
+    color: fade(@blue, 10%);
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+    transform: rotate(-180deg);
+  }
 }

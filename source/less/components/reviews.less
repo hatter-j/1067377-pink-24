@@ -29,39 +29,6 @@
 
 .reviews__list {
   .list-item-style();
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      width: 22px;
-      height: 41px;
-      background-image: url("../../img/icons/icon_slider_arrow.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    &::after {
-      transform: rotate(180deg);
-    }
-
-    &:hover::before,
-    &:focus::before,
-    &:hover::after,
-    &:focus::after {
-      background-image: url("../../img/icons/icon_slider_arrow--hover.svg");
-    }
-
-    &:active::before,
-    &:active::after {
-      background-image: url("../../img/icons/icon_slider_arrow--active.svg");
-    }
-  }
 }
 
 .reviews__blockquote {
@@ -80,6 +47,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0 auto;
     padding-top: 51px;
     width: 688px;
   }
