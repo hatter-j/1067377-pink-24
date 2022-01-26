@@ -14,18 +14,18 @@
   padding: 0;
   width: 6px;
   height: 6px;
-  background-color: rgba(@blue, 0.3);
+  background-color: fade(@blue, 30%);
   border: none;
   border-radius: 50%;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: rgba(@blue, 0.6);
+    background-color: fade(@blue, 60%);
   }
 
   &:active {
-    background-color: rgba(@blue, 0.1);
+    background-color: fade(@blue, 10%);
   }
 }
 
@@ -55,6 +55,7 @@
   cursor: pointer;
   padding: 0;
   color: fade(@blue, 30%);
+  display: flex;
 
   &:hover,
   &:focus {

@@ -4,17 +4,32 @@ const toggle1 = document.querySelector('.slider__toggle--1');
 const toggle2 = document.querySelector('.slider__toggle--2');
 const toggle3 = document.querySelector('.slider__toggle--3');
 
-let currentStep = 1;
+toggle1.addEventListener('click', function () {
+  toggle2.classList.remove('slider__toggle--current');
+  toggle3.classList.remove('slider__toggle--current');
+  toggle1.classList.add('slider__toggle--current');
 
-const moveTable = (param) => {
-  param === 'toggle2' ? currentStep-- : currentStep++;
-  if (currentStep > 2) currentStep = 2;
-  if (currentStep < 0) currentStep = 0;
+  table.classList.remove('prices__table--state-2');
+  table.classList.remove('prices__table--state-3');
+  table.classList.add('prices__table--state-1');
+});
 
-  const getPercent = -33.3 * currentStep;
-  table.style.transform = `translateX(${getPercent}%)`;
-};
+toggle2.addEventListener('click', function () {
+  toggle1.classList.remove('slider__toggle--current');
+  toggle3.classList.remove('slider__toggle--current');
+  toggle2.classList.add('slider__toggle--current');
 
-toggle1.addEventListener('click', () => moveTable());
-toggle2.addEventListener('click', () => moveTable());
-toggle3.addEventListener('click', () => moveTable());
+  table.classList.remove('prices__table--state-1');
+  table.classList.remove('prices__table--state-3');
+  table.classList.add('prices__table--state-2');
+});
+
+toggle3.addEventListener('click', function () {
+  toggle1.classList.remove('slider__toggle--current');
+  toggle2.classList.remove('slider__toggle--current');
+  toggle3.classList.add('slider__toggle--current');
+
+  table.classList.remove('prices__table--state-1');
+  table.classList.remove('prices__table--state-2');
+  table.classList.add('prices__table--state-3');
+});

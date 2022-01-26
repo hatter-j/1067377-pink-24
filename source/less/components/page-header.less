@@ -96,13 +96,13 @@
 .page-header__box {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  //min-height: 66px;
-  padding: 22px 20px;
+  align-items: center;
+  min-height: 66px;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    //min-height: 110px;
-    padding: 25px 20px 45px;
+    min-height: 110px;
+    //padding: 25px 20px 45px;
   }
 
   @media (min-width: @desktop-width) {
@@ -119,6 +119,7 @@
 
 .page-header__logo {
   display: flex;
+  align-content: center;
 }
 
 .page-header__logo-mobile {

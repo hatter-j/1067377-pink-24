@@ -4,11 +4,11 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    padding-top: 10px;
+    padding-top: 3px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 13px;
+    padding-top: 0;
   }
 }
 
@@ -23,6 +23,10 @@
 
 .copyright__link {
   color: @pink;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+  }
 
   &:hover,
   &:focus {
