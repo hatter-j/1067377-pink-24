@@ -1,23 +1,31 @@
+.slider {
+  position: relative;
+}
+
 .slider__toggles {
-  margin: 0;
+  width: 58px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .slider__toggle {
   padding: 0;
   width: 6px;
   height: 6px;
-  background-color: rgba(@blue, 0.3);
+  background-color: fade(@blue, 30%);
   border: none;
   border-radius: 50%;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: rgba(@blue, 0.6);
+    background-color: fade(@blue, 60%);
   }
 
   &:active {
-    background-color: rgba(@blue, 0.1);
+    background-color: fade(@blue, 10%);
   }
 }
 
@@ -26,4 +34,44 @@
   height: 11px;
   background-color: @white;
   border: 3px solid @blue;
+}
+
+.slider__nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.slider__nav-btn {
+  position: absolute;
+  top: -70px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  color: fade(@blue, 30%);
+  display: flex;
+
+  &:hover,
+  &:focus {
+    color: fade(@blue, 60%);
+  }
+
+  &:active {
+    color: fade(@blue, 10%);
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+    transform: rotate(-180deg);
+  }
 }

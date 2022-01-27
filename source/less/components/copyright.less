@@ -1,15 +1,32 @@
 .copyright {
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
 }
 
 .copyright__text {
   line-height: 18px;
-  margin-right: 0;
+  margin-right: 15px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .copyright__link {
   color: @pink;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 8px;
+  }
 
   &:hover,
   &:focus {
