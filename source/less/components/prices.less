@@ -8,7 +8,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 95px;
+    padding-bottom: 93px;
   }
 
   &::before {
@@ -55,6 +55,7 @@
   transition: transform 0.3s;
 
   @media (min-width: @tablet-width) {
+    transition: none;
     margin-bottom: 0;
   }
 }
@@ -171,14 +172,30 @@
     border-right: 2px solid @grey;
     border-bottom: 2px solid @grey;
     border-left: 2px solid @grey;
-    padding: 7px 12px;
+    padding: 6px 12px 7px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
     width: 236px;
-    padding: 13px 19px 15px;
+    padding: 12px 19px 16px;
   }
+}
+
+.prices__composition--border-top {
+  border-top: 2px solid @grey;
+}
+
+.prices__border-radius-left-top {
+  border-radius: 2px 0 0 0;
+}
+
+.prices__border-radius-left-bottom {
+  border-radius: 0 0 0 2px;
+}
+
+.prices__border-radius-right-bottom {
+  border-radius: 0 0 2px 0;
 }
 
 .prices__set {

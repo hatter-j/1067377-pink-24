@@ -4,7 +4,7 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0 20px;
+    column-gap: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,4 +14,19 @@
 
 .gallery__item {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
+  }
+}
+
+.gallery__item .card__likes {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 23px;
+  }
 }

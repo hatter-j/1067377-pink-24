@@ -1,20 +1,38 @@
 .photo-editor {
-  padding-top: 29px;
+  padding-top: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+    margin-bottom: 28px;
+  }
 }
 
 .photo-editor__caption {
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
-  margin: 0 0 52px;
+  margin: 0 0 42px;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 67px;
   }
 }
 
 .photo-editor__box {
   background-color: @light_grey;
+
+  @media (min-width: @desktop-width) {
+    background-color: @white;
+  }
 }
 
 .photo-editor__wrapper {
@@ -24,20 +42,72 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-bottom: 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @light_grey;
+    padding: 21px 60px 33px 80px;
+  }
+
+  img {
+    width: 280px;
+    height: 374px;
+    object-fit: contain;
+
+    @media (min-width: @tablet-width) {
+      width: 300px;
+      height: 400px;
+      margin-top: 36px;
+    }
   }
 }
 
 .photo-editor__form {
   @media (min-width: @tablet-width) {
-    width: 50%;
+    width: 275px;
+    margin-left: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 414px;
+    margin-left: 86px;
   }
 }
 
 .photo-editor__list {
   .list-item-style();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 48px 21px 38px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 31px 0 17px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 22px;
+    padding-left: 0;
+  }
 }
 
 .photo-editor__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 100%;
+    padding: 14px 0 0 5px;
+    margin-bottom: 11px;
+    border-bottom: 1px solid rgba(@blue, 0.1);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 14px 0 13px 4px;
+    margin-bottom: 0;
+  }
+
   svg {
     color: rgba(@blue, 0.3);
 
@@ -52,12 +122,89 @@
   }
 }
 
+.photo-editor__crop {
+  width: 44px;
+  height: 44px;
+
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    height: 22px;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.photo-editor__fill {
+  width: 48px;
+  height: 43px;
+
+  @media (min-width: @tablet-width) {
+    width: 24px;
+    height: 22px;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 48px;
+    height: 43px;
+  }
+}
+
+.photo-editor__contrast {
+  width: 32px;
+  height: 32px;
+
+  @media (min-width: @tablet-width) {
+    width: 16px;
+    height: 16px;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 32px;
+    height: 32px;
+    margin-left: 7px;
+    margin-top: 3px;
+  }
+}
+
+.photo-editor__filter {
+  padding: 10px;
+  margin-bottom: 24px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 18px 10px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 20px 30px 20px 0;
+    margin: 0;
+  }
+}
+
 .photo-editor__buttons {
-  padding: 38px 0 33px;
-  border-top: 1px solid rgba(@blue, 0.1);
+  padding: 38px 0 42px;
+
+  @media (max-width: @mobile-width-only) {
+    border-top: 1px solid rgba(@blue, 0.1);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-right: 10px;
+  }
 
   @media (min-width: @desktop-width) {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 91px;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 4px;
   }
 }
 
@@ -68,9 +215,18 @@
   color: @pink;
   border: 3px solid @pink;
   border-radius: 30px;
-  padding: 15px 3px;
+  padding: 15px 3px 16px;
   margin-bottom: 12px;
   width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 260px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 183px;
+  }
 
   &:hover,
   &:focus {
@@ -92,6 +248,14 @@
   border-radius: 30px;
   padding: 15px 3px;
   width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 260px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 183px;
+  }
 
   &:hover,
   &:focus {
