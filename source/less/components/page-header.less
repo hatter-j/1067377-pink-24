@@ -75,14 +75,7 @@
 }
 
 .page-header__toggle-icon--cross {
-  width: 23px;
-  height: 23px;
   display: none;
-}
-
-.page-header__toggle-icon--burger {
-  width: 50px;
-  height: 24px;
 }
 
 .page-header--opened .page-header__toggle-icon--cross {
@@ -122,30 +115,20 @@
 }
 
 .page-header__logo {
-  display: flex;
-  align-content: center;
-}
+  img {
+    display: flex;
+    align-content: center;
+    width: 74px;
+    height: 23px;
 
-.page-header__logo-mobile {
-  width: 74px;
-  height: 23px;
+    @media (min-width: @tablet-width) {
+      width: 145px;
+      height: 40px;
+    }
 
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-}
-
-.page-header__logo-tablet {
-  width: 145px;
-  height: 40px;
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
   }
 }
 

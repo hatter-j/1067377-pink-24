@@ -68,6 +68,11 @@
     background-position: center bottom -43px;
     margin: 0 auto;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/phone_mobile@2x.png");
+      background-size: 157px 320px;
+    }
+
     @media (min-width: @tablet-width) {
       background-image: url("../../img/phone_tablet.png");
       background-position: center bottom -65px;
@@ -76,6 +81,11 @@
       position: absolute;
       top: -52px;
       left: -310px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/phone_tablet@2x.png");
+        background-size: 268px 547px;
+      }
     }
 
     @media (min-width: @desktop-width) {
@@ -107,6 +117,11 @@
       background-image: url("../../img/phone_desktop_black-white.png");
       background-repeat: no-repeat;
       background-position: center bottom -80px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/phone_desktop_black-white@2x.png");
+        background-size: 300px 382px;
+      }
     }
 
     &:nth-child(2)::before {
@@ -119,6 +134,11 @@
       background-image: url("../../img/phone_desktop_pink.png");
       background-repeat: no-repeat;
       background-position: center bottom -80px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/phone_desktop_pink@2x.png");
+        background-size: 300px 382px;
+      }
     }
 
     &:nth-child(3)::before {
@@ -131,6 +151,11 @@
       background-image: url("../../img/phone_desktop_pink-smile.png");
       background-repeat: no-repeat;
       background-position: center bottom -80px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/phone_desktop_pink-smile@2x.png");
+        background-size: 300px 382px;
+      }
     }
   }
 }
