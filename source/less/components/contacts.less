@@ -87,7 +87,7 @@
   }
 
   &:active {
-    color: rgba(@blue, 0.3);
+    color: fade(@blue, 30%);
     text-decoration: none;
   }
 }
@@ -147,9 +147,6 @@
   width: 36px;
   height: 36px;
   position: absolute;
-  //top: 50%;
-  //left: 50%;
-  //transform: translate(-50% -50%);
   top: 47%;
   left: 44%;
   z-index: 1;
@@ -160,7 +157,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    top: 51%;
+    top: 52%;
     left: 49%;
   }
 }

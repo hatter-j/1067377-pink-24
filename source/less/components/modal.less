@@ -1,9 +1,14 @@
 .modal {
   margin: 0 auto;
   width: 320px;
-  border: 1px solid @pink; /*  ЗАМЕНИТЬ НА  transpsrent    */
+  border: 1px solid transparent;
   border-radius: 1px;
   box-shadow: 0 7px 15px fade(@shadow-black, 15%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 
   @media (min-width: @tablet-width) {
     width: 460px;
@@ -26,6 +31,8 @@
 }
 
 .modal--error {
+  background-color: @white;
+
   @media (min-width: @desktop-width) {
     background-color: @light_grey;
   }
@@ -84,6 +91,7 @@
   padding: 16px 2px 17px;
   margin-bottom: 50px;
   width: 280px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 300px;

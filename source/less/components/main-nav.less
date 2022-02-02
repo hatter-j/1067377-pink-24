@@ -25,7 +25,7 @@
 .main-nav__item {
   padding: 16px 0;
   border-top: 1px solid @black;
-  box-shadow: 0 1px 0 0 @black, inset 0 1px 0 0 rgba(@white, 0.15);
+  box-shadow: 0 1px 0 0 @black, inset 0 1px 0 0 fade(@white, 15%);
 
   @media (min-width: @tablet-width) {
     padding: 15px 0 16px;
@@ -47,12 +47,12 @@
     }
 
     &:active {
-      color: rgba(@pink, 0.3);
+      color: fade(@pink, 30%);
     }
 
     @media (min-width: @desktop-width) {
       &:active {
-        color: rgba(@white, 0.3);
+        color: fade(@white, 30%);
       }
     }
   }

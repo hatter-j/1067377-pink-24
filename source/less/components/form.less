@@ -94,6 +94,7 @@
   &:hover,
   &:focus {
     border-color: @blue;
+    outline: none;
   }
 
   &:active {
@@ -358,38 +359,6 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
   }
-
-  &:nth-child(1) {
-    @media (min-width: @tablet-width) {
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 59px;
-        height: 59px;
-        background-image: url("../../img/icons/icon_phone.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-    }
-  }
-
-  &:nth-child(2) {
-    @media (min-width: @tablet-width) {
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 59px;
-        height: 59px;
-        background-image: url("../../img/icons/icon_mail.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-    }
-  }
 }
 
 .form__user-contacts-label {
@@ -403,6 +372,40 @@
 
   @media (min-width: @desktop-width) {
     margin-left: 18px;
+  }
+}
+
+.form__user-contacts-phone,
+.form__user-contacts-mail {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    order: -1;
+  }
+}
+
+.form__user-contacts-phone::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    width: 59px;
+    height: 59px;
+    background-image: url("../../img/icons/icon_phone.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+  }
+}
+
+.form__user-contacts-mail::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    width: 59px;
+    height: 59px;
+    background-image: url("../../img/icons/icon_mail.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
   }
 }
 
@@ -423,6 +426,7 @@
   &:hover,
   &:focus {
     border-color: @blue;
+    outline: none;
   }
 
   &:active {
@@ -434,7 +438,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    order: -1;
     margin-top: 0;
     margin-bottom: 12px;
   }
@@ -470,7 +473,7 @@
     border-bottom: 2px solid @grey;
     border-radius: 1px;
     padding: 34px 60px 34px;
-    margin-top: -17px;
+    margin-top: -16px;
   }
 
   @media (min-width: @desktop-width) {
@@ -641,6 +644,7 @@
   box-sizing: border-box;
   padding: 13px 20px 5px;
   width: 100%;
+  resize: vertical;
 
   @media (min-width: @tablet-width) {
     margin-top: 10px;
@@ -674,6 +678,7 @@
 .form__button {
   padding: 16px 2px 17px;
   width: 280px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 300px;

@@ -30,6 +30,20 @@
 .photo-editor__box {
   background-color: @light_grey;
 
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 200px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: fade(@blue, 10%);
+    }
+  }
+
   @media (min-width: @desktop-width) {
     background-color: @white;
   }
@@ -100,7 +114,7 @@
     width: 100%;
     padding: 14px 0 0 5px;
     margin-bottom: 11px;
-    border-bottom: 1px solid rgba(@blue, 0.1);
+    border-bottom: 1px solid fade(@blue, 10%);
   }
 
   @media (min-width: @desktop-width) {
@@ -109,11 +123,11 @@
   }
 
   svg {
-    color: rgba(@blue, 0.3);
+    color: fade(@blue, 30%);
 
     &:hover,
     &:focus {
-      color: rgba(@blue, 0.5);
+      color: fade(@blue, 50%);
     }
 
     &:active {
@@ -180,10 +194,6 @@
 .photo-editor__buttons {
   padding: 38px 0 42px;
 
-  @media (max-width: @mobile-width-only) {
-    border-top: 1px solid rgba(@blue, 0.1);
-  }
-
   @media (min-width: @tablet-width) {
     padding-right: 10px;
   }
@@ -209,6 +219,7 @@
   padding: 15px 3px 16px;
   margin-bottom: 12px;
   width: 280px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 260px;
@@ -226,7 +237,7 @@
   }
 
   &:active {
-    color: rgba(@white, 0.3);
+    color: fade(@white, 30%);
   }
 }
 
@@ -234,11 +245,12 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  color: rgba(@blue, 0.1);
-  border: 3px solid rgba(@blue, 0.1);
+  color: fade(@blue, 10%);
+  border: 3px solid fade(@blue, 10%);
   border-radius: 30px;
   padding: 15px 3px;
   width: 280px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 260px;
@@ -250,13 +262,13 @@
 
   &:hover,
   &:focus {
-    color: rgba(@blue, 0.3);
-    border-color: rgba(@blue, 0.3);
+    color: fade(@blue, 30%);
+    border-color: fade(@blue, 30%);
   }
 
   &:active {
-    color: rgba(@white, 0.3);
-    background-color: rgba(@blue, 0.3);
-    border-color: rgba(@blue, 0.3);
+    color: fade(@white, 30%);
+    background-color: fade(@blue, 30%);
+    border-color: transparent;
   }
 }
