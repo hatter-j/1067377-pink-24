@@ -40,7 +40,7 @@
       left: 0;
       width: 100%;
       height: 1px;
-      background-color: fade(@blue, 10%);
+      background-color: rgba(@blue, 0.1);
     }
   }
 
@@ -114,7 +114,7 @@
     width: 100%;
     padding: 14px 0 0 5px;
     margin-bottom: 11px;
-    border-bottom: 1px solid fade(@blue, 10%);
+    border-bottom: 1px solid rgba(@blue, 0.1);
   }
 
   @media (min-width: @desktop-width) {
@@ -123,11 +123,12 @@
   }
 
   svg {
-    color: fade(@blue, 30%);
+    color: rgba(@blue, 0.3);
+    fill: currentColor;
 
     &:hover,
     &:focus {
-      color: fade(@blue, 50%);
+      color: rgba(@blue, 0.5);
     }
 
     &:active {
@@ -237,7 +238,7 @@
   }
 
   &:active {
-    color: fade(@white, 30%);
+    color: rgba(@white, 0.3);
   }
 }
 
@@ -245,8 +246,8 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  color: fade(@blue, 10%);
-  border: 3px solid fade(@blue, 10%);
+  color: rgba(@blue, 0.1);
+  border: 3px solid rgba(@blue, 0.1);
   border-radius: 30px;
   padding: 15px 3px;
   width: 280px;
@@ -262,13 +263,13 @@
 
   &:hover,
   &:focus {
-    color: fade(@blue, 30%);
-    border-color: fade(@blue, 30%);
+    color: rgba(@blue, 0.3);
+    border-color: rgba(@blue, 0.3);
   }
 
   &:active {
-    color: fade(@white, 30%);
-    background-color: fade(@blue, 30%);
+    color: rgba(@white, 0.3);
+    background-color: rgba(@blue, 0.3);
     border-color: transparent;
   }
 }

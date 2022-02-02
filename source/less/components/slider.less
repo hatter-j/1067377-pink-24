@@ -14,18 +14,18 @@
   padding: 0;
   width: 6px;
   height: 6px;
-  background-color: fade(@blue, 30%);
+  background-color: rgba(@blue, 0.3);
   border: none;
   border-radius: 50%;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    background-color: fade(@blue, 60%);
+    background-color: rgba(@blue, 0.6);
   }
 
   &:active {
-    background-color: fade(@blue, 10%);
+    background-color: rgba(@blue, 0.1);
   }
 }
 
@@ -59,16 +59,17 @@
   background: none;
   cursor: pointer;
   padding: 0;
-  color: fade(@blue, 30%);
+  color: rgba(@blue, 0.3);
+  fill: currentColor;
   display: flex;
 
   &:hover,
   &:focus {
-    color: fade(@blue, 60%);
+    color: rgba(@blue, 0.6);
   }
 
   &:active {
-    color: fade(@blue, 10%);
+    color: rgba(@blue, 0.1);
   }
 
   &--prev {
