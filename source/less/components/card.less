@@ -24,12 +24,16 @@
   margin-bottom: 20px;
   position: relative;
 
+  @media (min-width: @tablet-width) {
+    margin-bottom: 51px;
+  }
+
   &::after {
     content: "Панорама дня";
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
     width: 140px;
     .link-style();
     font-size: 12px;
@@ -40,6 +44,15 @@
     text-align: center;
     padding: 6px 5px;
     background-color: @pink;
+
+    @media (min-width: @tablet-width) {
+      top: 57px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 54px;
+      right: 130px;
+    }
   }
 
   img {
@@ -62,17 +75,67 @@
   text-decoration: none;
 }
 
-.card__content {
-  background-color: @light_grey;
-  padding: 26px 10px 26px 17px;
+.card--photo-of-day .card__text {
+  @media (min-width: @tablet-width) {
+    margin: 0 0 11px;
+    grid-column: ~"1 / -1";
+  }
+
+  br {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.card--photo-of-day .card__content {
+  min-height: auto;
 
   @media (min-width: @tablet-width) {
-    min-height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card--photo-of-day .card__likes {
+  @media (min-width: @tablet-width) {
+    grid-column: ~"2 / -1";
+    grid-row: 1;
+    margin-left: auto;
+    margin-right: 19px;
+    padding-top: 2px;
+    width: auto;
+  }
+}
+
+.card--photo-of-day .card__likes-number {
+  @media (min-width: @tablet-width) {
+    margin-right: 17px;
+  }
+}
+
+.card__box {
+  display: flex;
+  align-items: center;
+}
+
+.card__content {
+  background-color: @light_grey;
+  padding: 18px 10px 18px 17px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 155px;
+    padding: 23px 10px 12px 29px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 27px;
   }
 }
 
 .card__user-name {
   font-weight: 700;
+  margin-right: 3px;
 }
 
 .card__user-post-time {
@@ -83,15 +146,36 @@
 }
 
 .card__text {
-  margin: 0;
+  margin: 1px 0 11px;
+  width: 100%;
   /*max-height: 34px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;*/
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.card__likes {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    width: 240px;
+    justify-content: space-between;
+  }
 }
 
 .card__likes-button {
   border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .card__likes-number {
@@ -99,4 +183,8 @@
   color: @pink;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    order: -1;
+  }
 }

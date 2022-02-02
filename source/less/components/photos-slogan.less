@@ -4,16 +4,24 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 102px;
+  padding-top: 93px;
   min-height: 237px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background_city@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     background-image: url("../../img/background_city_tablet.jpg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 191px;
+    padding-top: 176px;
     min-height: 440px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background_city_tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -21,8 +29,12 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 184px;
+    padding-top: 168px;
     min-height: 394px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background_city_desktop@2x.jpg");
+    }
   }
 }
 
@@ -37,11 +49,25 @@
     font-size: 50px;
     line-height: 68px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 357px;
+    margin: 0 auto;
+  }
 }
 
 .photos-slogan__footer {
-  padding-top: 55px;
-  padding-bottom: 40px;
+  padding-top: 44px;
+  padding-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 92px;
+    padding-bottom: 76px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 88px;
+  }
 }
 
 .photos-slogan__description {
@@ -52,10 +78,10 @@
   @media (min-width: @tablet-width) {
     font-size: 18px;
     line-height: 30px;
-    max-width: 400px;
+    max-width: 450px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 450px;
+    max-width: 600px;
   }
 }

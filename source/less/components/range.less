@@ -1,6 +1,4 @@
 .range {
-  padding: 10px;
-
   @media (max-width: @mobile-width-only) {
     display: none;
   }
@@ -24,18 +22,53 @@
   width: 240px;
   height: 2px;
   background-color: @blue;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+  }
 }
 
 .range__toggle {
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   background-color: @white;
   border: 2px solid @pink;
   border-radius: 50%;
+  cursor: pointer;
   position: absolute;
   top: -5px;
+  right: 43px;
 
   &:active {
     background-color: @pink;
+  }
+}
+
+.range__toggle--crop {
+  right: 28px;
+
+  @media (min-width: @desktop-width) {
+    right: 40px;
+  }
+}
+
+.range__toggle--fill {
+  right: 163px;
+
+  @media (min-width: @desktop-width) {
+    right: 239px;
+  }
+}
+
+.range__toggle--contrast {
+  right: 92px;
+
+  @media (min-width: @desktop-width) {
+    right: 138px;
   }
 }
