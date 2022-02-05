@@ -105,17 +105,35 @@
 }
 
 .contacts__map {
-  background-color: @grey;
   width: 100%;
   height: 200px;
   position: relative;
+  background-color: @grey;
+  background-image: url("../../img/background_map.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background_map@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     height: 374px;
+    background-image: url("../../img/background_map_tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background_map_tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     height: 495px;
+    background-image: url("../../img/background_map_desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background_map_desktop@2x.jpg");
+    }
   }
 
   &::before {
